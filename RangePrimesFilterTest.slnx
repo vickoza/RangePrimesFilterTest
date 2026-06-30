@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="RangePrimesFilterTest.vcxproj" />
+  <Project Path="RangePrimesFilterTest.vcxproj" Id="b2d2634a-c4bb-45ca-87cf-090820d87b6c" />
 </Solution>

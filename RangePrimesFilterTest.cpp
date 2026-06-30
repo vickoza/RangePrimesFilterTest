@@ -92,9 +92,14 @@ int main() {
                 ).empty();
             };
 
-        auto primes = std::views::iota(1, N) | std::views::filter(isprime_new);
-        std::cout << std::reduce(std::execution::par, primes.begin(), primes.end(), 0ll) << '\n';
-
+        /*auto primes = std::views::iota(1, N) | std::views::filter(isprime_new);
+        std::cout << std::reduce(std::execution::par, primes.begin(), primes.end(), 0ll) << '\n';*/
+        long long psum2{ 0 };
+		for (auto i : std::views::iota(1, N) | std::views::filter(isprime_old))
+		{
+			psum2 += i;
+		}
+		std::cout << psum2 << '\n';
         auto t3 = std::chrono::steady_clock::now();
         std::chrono::duration<double> dt2 = t3 - t2;
         std::cout << dt2.count() << " seconds" << '\n';
